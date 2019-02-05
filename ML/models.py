@@ -11,7 +11,7 @@ class Type(models.Model):
         ordering = ('TypeID' , )
     
     def __str__(self):
-        return str(self.Name)
+        return str(self.TypeName)
 
 #楽曲マスタ
 class Song(models.Model):
