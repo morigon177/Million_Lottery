@@ -5,18 +5,271 @@
 <html lang="ja">
 
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="index.css">
-    <title>{{title}}</title>
+<meta charset="utf-8">        
+<title>{{title}}</title>
+    <style>
+
+/* What's Next Song ? */
+    h2 {
+        text-align: center;
+        font-family: Impact Chacoal;
+        font-size: 40px;
+        color: silver;
+        }
+    
+/* Please select the music type! */        
+    h3 {
+        text-align: center;
+        font-family: Impact Chacoal;
+        font-size: 25px;
+        color: black;
+        }
+
+/* Princess */
+.cp_ipcheck01 {
+	width: 10%;
+	margin: 2em auto;
+	text-align: center;
+}
+.cp_ipcheck01 input[type='checkbox'] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.cp_ipcheck01 label {
+	position: relative;
+	display: inline-block;
+	margin-right: 30px;
+	padding-right: 10px;
+	padding-left: 35px;
+	cursor: pointer;
+}
+.cp_ipcheck01 label::before {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
+	content: ' ';
+	border: 2px solid #f96aa0;
+}
+.cp_ipcheck01 input[type='checkbox'] + label::before {
+	border-radius: 4px;
+}
+.cp_ipcheck01 input[type='checkbox']:checked + label {
+	padding-left: 10px;
+	color: #ffffff;
+}
+.cp_ipcheck01 input[type='checkbox']:checked + label::before {
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #f96aa0;
+}
+/* Transition */
+.cp_ipcheck label, .cp_ipcheck label::before {
+	-webkit-transition: 0.25s all ease;
+	        transition: 0.25s all ease;
+}
+
+/* Fairy */
+.cp_ipcheck02 {
+	width: 10%;
+	margin: 2em auto;
+	text-align: center;
+}
+.cp_ipcheck02 input[type='checkbox'] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.cp_ipcheck02 label {
+	position: relative;
+	display: inline-block;
+	margin-right: 30px;
+	padding-right: 10px;
+	padding-left: 35px;
+	cursor: pointer;
+}
+.cp_ipcheck02 label::before {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
+	content: ' ';
+	border: 2px solid #006df8;
+}
+.cp_ipcheck02 input[type='checkbox'] + label::before {
+	border-radius: 4px;
+}
+.cp_ipcheck02 input[type='checkbox']:checked + label {
+	padding-left: 10px;
+	color: #ffffff;
+}
+.cp_ipcheck02 input[type='checkbox']:checked + label::before {
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #006df8;
+}
+/* Transition */
+.cp_ipcheck label, .cp_ipcheck label::before {
+	-webkit-transition: 0.25s all ease;
+	        transition: 0.25s all ease;
+}
+
+
+/* Angel */
+.cp_ipcheck03 {
+	width: 10%;
+	margin: 2em auto;
+	text-align: center;
+}
+.cp_ipcheck03 input[type='checkbox'] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.cp_ipcheck03 label {
+	position: relative;
+	display: inline-block;
+	margin-right: 30px;
+	padding-right: 10px;
+	padding-left: 35px;
+	cursor: pointer;
+}
+.cp_ipcheck03 label::before {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
+	content: ' ';
+	border: 2px solid #f9ca00;
+}
+.cp_ipcheck03 input[type='checkbox'] + label::before {
+	border-radius: 4px;
+}
+.cp_ipcheck03 input[type='checkbox']:checked + label {
+	padding-left: 10px;
+	color: #ffffff;
+}
+.cp_ipcheck03 input[type='checkbox']:checked + label::before {
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #f9ca00;
+}
+/* Transition */
+.cp_ipcheck label, .cp_ipcheck label::before {
+	-webkit-transition: 0.25s all ease;
+	        transition: 0.25s all ease;
+}
+
+
+/* All */
+.cp_ipcheck04 {
+	width: 10%;
+	margin: 2em auto;
+	text-align: center;
+}
+.cp_ipcheck04 input[type='checkbox'] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+.cp_ipcheck04 label {
+	position: relative;
+	display: inline-block;
+	margin-right: 30px;
+	padding-right: 10px;
+	padding-left: 35px;
+	cursor: pointer;
+}
+.cp_ipcheck04 label::before {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
+	content: ' ';
+	border: 2px solid #85aa85;
+}
+.cp_ipcheck04 input[type='checkbox'] + label::before {
+	border-radius: 4px;
+}
+.cp_ipcheck04 input[type='checkbox']:checked + label {
+	padding-left: 10px;
+	color: #ffffff;
+}
+.cp_ipcheck04 input[type='checkbox']:checked + label::before {
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #85aa85;
+}
+/* Transition */
+.cp_ipcheck label, .cp_ipcheck label::before {
+	-webkit-transition: 0.25s all ease;
+	        transition: 0.25s all ease;
+}
+
+.cp_button {
+	text-align: center;
+}
+    
+    </style>
+    
 </head>
 
 <body>
 
-    <h1>{{title}}</h1>
+    <h2>{{title}}</h2>
     <p>{{msg}}</p>
     
-    <h2>testpage</h2>
-  
+    <h3>Please select the music type!</h3>
+
+<form action="{% url 'ML:index' %}" method="post">
+<div class="cp_ipcheck01">
+	<input type="checkbox" name="type" id="type_1" value='1' />
+	<label for="type_1">Princess</label>
+</div>
+
+<div class="cp_ipcheck02">
+	<input type="checkbox" name="type" id="type_2" value='2' />
+	<label for="type_2">Fairy</label>
+</div>
+
+<div class="cp_ipcheck03">
+	<input type="checkbox" name="type" id="type_3" value='3' />
+	<label for="type_3">Angel</label>
+</div>
+
+<div class="cp_ipcheck04">
+	<input type="checkbox" name="type" id="type_4" value='4' />
+	<label for="type_4">All</label>
+</div>
+
+<div>
+
+{% csrf_token %}
+{{ form }}
+
+
+<div class="cp_button">
+    <input type="submit" value="Lottery">
+</div>
+</form>
+
  
 </body>
 </html>
