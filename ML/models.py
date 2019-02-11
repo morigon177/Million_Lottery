@@ -22,6 +22,6 @@ class Song(models.Model):
         ordering = ('SongID' , )
     
     def __str__(self):
-        output = (str(self.SongName) + "     :   (" + str(self.TypeName) + ")   ,  讌ｽ譖ｲ霑ｽ蜉�譌･ - " + str(self.AddDate))
+        output = (str(self.SongName) + "     :   (" + str(self.TypeName) + ")   ,  AddDate - " + str(self.AddDate))
         return  output  
     
