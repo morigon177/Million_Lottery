@@ -1,30 +1,35 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from ML.models import Type, Song
 
 
 def index(request):
-    global data
+    global values
     if(request.method == 'POST'):
-        values = request.POST.getlist('type')
+       try:
+           values = request.POST['type']
+       except:
+           values = '0'
        
-        if(values == '1'):
-            data = Song.objects.filter(TypeName__iexact ='Princess' )
+       if(values == '1'):
+            data = Song.objects.filter(TypeName__TypeName__contains ='Princess' )
         
-        elif(values == '2'):
-            data = Song.objects.filter(TypeName__iexact = 'Fairy')
+       elif(values == '2'):
+            data = Song.objects.filter(TypeName__TypeName__contains = 'Fairy')
         
-        elif(values == '3'):
-            data = Song.objects.filter(TypeName__iexact = 'Angel')    
+       elif(values == '3'):
+            data = Song.objects.filter(TypeName__TypeName__contains = 'Angel')    
         
-        elif(values == '4'):
-            data = Song.objects.filter(TypeName__iexact = 'All')
-    
+       elif(values == '4'):
+            data = Song.objects.filter(TypeName__TypeName__contains = 'All')    
+       
+       else:
+            data = Song.objects.filter(TypeName__TypeName__contains = 'abc')
+       
     else:
-        #values = request.POST.getlist('type')
-        data = Song.objects.all()
+        data = Song.objects.filter(TypeName__TypeName__contains = 'abc')
              
     params = {
-        'title':"What's Next Song ? " ,
+        'title':"What's Next Song ?" ,
         'data':data,
     }
     

@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts.apps.AccountsConfig', #アカウント管理用
-    'ML', #MLアプリケーションを定義
+    'accounts.apps.AccountsConfig',
+    'ML',
 ]
 
 MIDDLEWARE = [
