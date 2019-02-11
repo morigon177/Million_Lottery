@@ -11,19 +11,21 @@ def index(request):
            values = '0'
        
        if(values == '1'):
-            data = Song.objects.filter(TypeName__TypeName__contains ='Princess' )
+            datal = Song.objects.filter(TypeName__TypeName__contains ='Princess' )
         
        elif(values == '2'):
-            data = Song.objects.filter(TypeName__TypeName__contains = 'Fairy')
+            datal = Song.objects.filter(TypeName__TypeName__contains = 'Fairy')
         
        elif(values == '3'):
-            data = Song.objects.filter(TypeName__TypeName__contains = 'Angel')    
+            datal = Song.objects.filter(TypeName__TypeName__contains = 'Angel')    
         
        elif(values == '4'):
-            data = Song.objects.filter(TypeName__TypeName__contains = 'All')    
+            datal = Song.objects.filter(TypeName__TypeName__contains = 'All')    
        
        else:
-            data = Song.objects.filter(TypeName__TypeName__contains = 'abc')
+            datal = Song.objects.filter(TypeName__TypeName__contains = 'abc')
+       
+       data = datal.order_by('?')[:1]     
        
     else:
         data = Song.objects.filter(TypeName__TypeName__contains = 'abc')
